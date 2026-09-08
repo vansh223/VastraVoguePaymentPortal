@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Vastra Vogue | Payment</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="grain"></div>
+<header class="navbar">
+<a class="brand" href="#"><span class="brand-mark">V</span><span>VASTRA <em>VOGUE</em></span></a>
+<span class="secure">SECURE CHECKOUT • UPI</span>
+</header>
+
+<div class="order-gate" id="orderGate">
+<div class="gate-box">
+<div class="gate-mark">V</div>
+<p class="eyebrow">VASTRA VOGUE</p>
+<h1>Enter your<br><span>order code.</span></h1>
+<p class="gate-text">Enter the unique code provided by Vastra Vogue to view your order and continue to payment.</p>
+<form id="orderForm">
+<input id="orderCodeInput" type="text" placeholder="e.g. VV-A102" autocomplete="off" spellcheck="false" required>
+<button type="submit">View my order <span>→</span></button>
+</form>
+<p class="gate-error" id="gateError"></p>
+<p class="gate-note">Your order code is provided by Vastra Vogue.</p>
+</div>
+</div>
+
+<main class="page" id="checkoutPage">
+<section class="hero">
+<p class="eyebrow">YOUR ORDER IS ALMOST YOURS</p>
+<h1>Complete your<br><span>purchase.</span></h1>
+<p class="subtext">Order <strong id="heroOrderCode">—</strong> • Scan the QR code below using any UPI app and complete your payment.</p>
+</section>
+
+<section class="checkout-grid">
+<div class="payment-card">
+<div class="card-top"><div><p class="mini-label">PAYMENT</p><h2>Scan & Pay</h2></div><span class="status-dot"><i></i> Secure</span></div>
+<div class="qr-wrap"><img src="c:\Users\itsva\OneDrive\Desktop\payment\scanner.png" alt="Vastra Vogue UPI payment QR code"></div>
+<p class="scan-title">SCAN • PAY • SLAY</p>
+<p class="scan-help">Use Google Pay, PhonePe, Paytm or any UPI app.</p>
+<div class="upi-row"><span>GPay</span><span>PhonePe</span><span>Paytm</span><span>BHIM</span></div>
+<button class="copy-upi" id="copyUpi"><span>UPI ID: itsvansh223@okhdfcbank</span><b>Copy</b></button>
+<button class="paid-btn" id="paidBtn"><span>I've completed the payment</span><span>→</span></button>
+</div>
+
+<aside class="summary-card">
+<p class="mini-label">ORDER SUMMARY</p>
+<div class="summary-product">
+<div class="product-placeholder">VV</div>
+<div><h3 id="productName">—</h3><p id="productDescription">—</p></div>
+</div>
+<div class="divider"></div>
+<div class="price-row"><span>Subtotal</span><strong id="subtotal">₹0</strong></div>
+<div class="price-row"><span>Shipping</span><strong class="free">FREE</strong></div>
+<div class="divider"></div>
+<div class="total-row"><span>Total</span><strong id="total">₹0</strong></div>
+<div class="order-box"><span>ORDER NUMBER</span><strong id="orderId">—</strong></div>
+<p class="note">Your order will be processed once payment is verified.</p>
+</aside>
+</section>
+</main>
+
+<footer><div><strong>VASTRA VOGUE</strong><span>Style that speaks.</span></div><div class="footer-links"><a href="https://instagram.com/" target="_blank">Instagram</a><a href="https://wa.me/" target="_blank">WhatsApp</a></div></footer>
+
+<div class="success-overlay" id="successOverlay">
+<div class="success-box"><div class="check">✓</div><p class="eyebrow">PAYMENT SUBMITTED</p><h2>You're officially<br><span>Vogue.</span></h2><p>We've received your payment confirmation.</p><div class="success-order"><span>ORDER</span><strong id="successOrder">—</strong></div><button id="closeSuccess">Back to Vastra Vogue</button></div>
+</div>
+<div class="toast" id="toast">UPI ID copied!</div>
+
+<script src="config.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

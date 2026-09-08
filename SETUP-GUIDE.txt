@@ -1,0 +1,45 @@
+VASTRA VOGUE — FINAL GOOGLE SHEETS SETUP
+
+1. GOOGLE SHEET
+Your sheet should be:
+A: Order Code
+B: Product Name
+C: Description
+D: Price
+
+Example:
+VV-A102 | Oversized Tee | Black • Size M | 999
+
+2. APPS SCRIPT
+Open the Google Sheet.
+Extensions → Apps Script.
+Paste Code.gs.
+Save.
+Deploy → New deployment → Web app.
+Execute as: Me.
+Who has access: Anyone.
+Deploy and authorize.
+Copy the Web app URL ending in /exec.
+
+3. WEBSITE
+Open config.js.
+Replace:
+const API_URL = "PASTE_YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE";
+with the Web App URL.
+
+4. GITHUB
+Upload ALL of these to the same folder/repository:
+index.html
+style.css
+script.js
+config.js
+qr-payment.png
+
+Code.gs is for Apps Script, not GitHub Pages.
+
+5. ADDING ORDERS
+Only add rows to Google Sheets. The website will use them automatically.
+
+IMPORTANT:
+The "I've completed the payment" button is only a confirmation screen.
+It does not independently verify UPI payment.
